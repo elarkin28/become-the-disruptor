@@ -1,0 +1,160 @@
+/* ARA 2026 resource handout. Shared styles. The Letter and Phone sheets set the page box and the type scale. */
+
+@font-face { font-family: "Poppins"; font-weight: 300; font-style: normal; src: url("fonts/Poppins-Light.ttf"); }
+@font-face { font-family: "Poppins"; font-weight: 300; font-style: italic; src: url("fonts/Poppins-LightItalic.ttf"); }
+@font-face { font-family: "Poppins"; font-weight: 700; font-style: normal; src: url("fonts/Poppins-Bold.ttf"); }
+@font-face { font-family: "Poppins"; font-weight: 700; font-style: italic; src: url("fonts/Poppins-BoldItalic.ttf"); }
+
+:root {
+  --cream: #F5F8ED;
+  --navy: #283675;
+  --navy-80: #535D8E;   /* navy over cream at 80 percent, 5.9:1 on cream */
+  --navy-45: #9AA1BE;
+  --yellow: #E6B422;    /* the data rule swatches only, Eric's call: real traffic-light colors */
+  --red: #CC4B3C;
+  --navy-25: #CBD0DF;   /* bars at rest, rules */
+  --green: #67AA67;
+  --white: #FFFFFF;
+  --radius: 10pt;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--cream); }
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: var(--navy);
+  background: var(--cream);
+  -weasy-hyphens: none;
+  hyphens: none;
+}
+
+h1, h2, h3, h4 { font-weight: 700; color: var(--navy); margin: 0; break-after: avoid; page-break-after: avoid; }
+p { margin: 0; }
+a { color: var(--navy); text-decoration: underline; text-decoration-color: var(--green); text-decoration-thickness: 0.09em; text-underline-offset: 0.14em; }
+i, em { font-style: italic; }
+q { quotes: "\201C" "\201D"; }
+q::before { content: open-quote; }
+q::after { content: close-quote; }
+
+/* Web-only elements stay out of the PDFs */
+.web-only { display: none; }
+
+/* ---------- Cover ---------- */
+.cover { position: relative; overflow: hidden; background: var(--navy); page: cover; break-after: page; page-break-after: always; }
+.cover-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 50%; }
+.cover-scrim { position: absolute; inset: 0; background: linear-gradient(to top, rgba(40,54,117,0.94) 0%, rgba(40,54,117,0.78) 34%, rgba(40,54,117,0.0) 68%); }
+.cover-text { position: absolute; left: 0; right: 0; bottom: 0; color: var(--white); }
+.cover-text h1 { color: var(--white); line-height: 1.04; }
+.cover-text .eyebrow { color: var(--green); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+.cover-text .cover-session { color: var(--white); }
+.cover-text .cover-author { color: var(--white); }
+
+/* ---------- Find it fast ---------- */
+.lede { font-weight: 300; }
+.nav-label { color: var(--green); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+.chips { display: block; }  /* block, not flex: WeasyPrint drops link annotations on flex items */
+.chip, .btn {
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 999px;
+  line-height: 1.2;
+}
+.chip { background: var(--white); color: var(--navy); }
+.btn { background: var(--navy); color: var(--white); }
+.btn i { color: var(--white); }
+
+/* ---------- Part opener ---------- */
+.part { background: var(--navy); color: var(--white); border-radius: var(--radius); break-inside: avoid; page-break-inside: avoid; break-after: avoid; page-break-after: avoid; }
+.part-marker { display: flex; align-items: center; justify-content: space-between; }
+.part-num { color: var(--green); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+.bars { display: inline-flex; }
+.bars i { display: inline-block; background: rgba(255,255,255,0.28); border-radius: 2pt; }
+.bars i.on { background: var(--green); }
+.part-title { color: var(--white); line-height: 1.05; }
+
+/* ---------- Sections ---------- */
+section { break-inside: auto; }
+section > h2 { line-height: 1.15; }
+.h3-section { line-height: 1.2; }
+.callout { font-weight: 700; }
+
+/* Cards */
+.cards { display: flex; flex-wrap: wrap; }
+.card { background: var(--white); border-radius: var(--radius); break-inside: avoid; page-break-inside: avoid; }
+.card h3 { line-height: 1.2; }
+.card p { font-weight: 300; }
+.card .icon { display: block; }
+.card .n, .panel .n { color: var(--green); font-weight: 700; margin-right: 0.45em; }
+.sw { display: inline-block; width: 0.8em; height: 0.8em; border-radius: 3pt; vertical-align: -0.05em; margin-right: 0.45em; }
+.sw.green { background: var(--green); }
+.sw.yellow { background: var(--yellow); }
+.sw.red { background: var(--red); }
+
+/* Prompt cards */
+.prompt { background: var(--white); border-radius: var(--radius); break-inside: avoid; page-break-inside: avoid; }
+.prompt-label { color: var(--green); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; break-after: avoid; page-break-after: avoid; }
+.prompt h3 { line-height: 1.2; }
+.prompt pre { font-family: "Poppins", sans-serif; font-weight: 300; white-space: pre-wrap; margin: 0; color: var(--navy); }
+
+/* Lists */
+ol.numbered { margin: 0; padding: 0; list-style: none; counter-reset: q; break-inside: avoid; page-break-inside: avoid; }
+ol.numbered li { counter-increment: q; position: relative; break-inside: avoid; }
+ol.numbered li::before { content: counter(q); position: absolute; left: 0; top: 0; color: var(--green); font-weight: 700; }
+
+/* The chain */
+.chain { display: flex; flex-wrap: wrap; }
+.link { background: var(--white); border-radius: var(--radius); break-inside: avoid; page-break-inside: avoid; }
+.link h3 { text-transform: uppercase; letter-spacing: 0.06em; }
+.link .wm { font-weight: 700; line-height: 1.25; }
+.link .k { display: block; color: var(--green); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+.link .q { font-weight: 700; }
+.link .qnote { font-weight: 300; }
+.aerial { margin: 0; break-inside: avoid; page-break-inside: avoid; }
+.aerial img { display: block; width: 100%; height: auto; border-radius: var(--radius); }
+.aerial figcaption { color: var(--navy-80); }
+
+/* Chapters strip */
+.chapters { margin: 0; break-inside: avoid; page-break-inside: avoid; }
+.panels { display: flex; }
+.panels img { display: block; height: auto; border-radius: var(--radius); }
+.chapter-names { font-weight: 700; line-height: 1.35; display: flex; flex-wrap: wrap; }
+.chapter-names span { white-space: nowrap; }
+.chapter-names .n { color: var(--green); font-weight: 700; margin-right: 0.3em; }
+.chapters figcaption { color: var(--navy-80); }
+
+/* Tables */
+table { border-collapse: collapse; width: 100%; }
+table.grid thead th { background: var(--navy); color: var(--white); font-weight: 700; text-align: left; }
+table.grid thead th:first-child { border-top-left-radius: var(--radius); }
+table.grid thead th:last-child { border-top-right-radius: var(--radius); }
+table.grid tbody td { background: var(--white); border-bottom: 1pt solid var(--cream); vertical-align: top; }
+table.grid tbody tr:last-child td:first-child { border-bottom-left-radius: var(--radius); }
+table.grid tbody tr:last-child td:last-child { border-bottom-right-radius: var(--radius); }
+table.grid tbody td:nth-child(2) { font-weight: 700; }
+table tr { break-inside: avoid; page-break-inside: avoid; }
+table.grid tbody tr:last-child { break-before: avoid; page-break-before: avoid; }
+table.spec th { background: var(--navy); color: var(--white); text-align: left; font-weight: 700; vertical-align: top; }
+table.spec td { background: var(--white); border-bottom: 1pt solid var(--cream); vertical-align: top; }
+table.spec tr:first-child th { border-top-left-radius: var(--radius); }
+table.spec tr:first-child td { border-top-right-radius: var(--radius); }
+table.spec tr:last-child th { border-bottom-left-radius: var(--radius); }
+table.spec tr:last-child td { border-bottom-right-radius: var(--radius); }
+
+/* Reading and quotes */
+ul.books, ul.quotes { list-style: none; margin: 0; padding: 0; }
+ul.books li { break-inside: avoid; page-break-inside: avoid; }
+ul.books .why { display: block; font-weight: 300; }
+ul.quotes li { break-inside: avoid; }
+ul.quotes q { font-weight: 700; }
+
+/* Back page */
+.back { break-before: page; page-break-before: always; }
+.contact { display: flex; align-items: center; }
+.headshot { display: block; border-radius: var(--radius); object-fit: cover; }
+.contact h2 { line-height: 1.15; }
+.who { font-weight: 300; }
+.takeaway { font-weight: 700; line-height: 1.1; }
+.legal { color: var(--navy-80); }

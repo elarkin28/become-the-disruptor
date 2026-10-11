@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Become the Disruptor: the resource handout</title>
+<meta name="author" content="Eric Larkin, Nevada Pic A Part">
+<meta name="description" content="Change the situation, not the effort. The prompt, the four questions, the four checks, the chain, the system, the data rule, the prompt library, the reading. From Become the Disruptor: Rethinking Self-Service Key Metrics with AI, ARA 2026 Convention and Expo, Atlanta, October 16, 2026.">
+<meta name="keywords" content="self-service auto recycling, leading indicators, scorecard, EOS, AI prompts, ARA 2026">
+<link rel="stylesheet" href="ARA-2026-Resource-Handout.css">
+<!-- The build script appends ARA-2026-Resource-Handout-Letter.css or ARA-2026-Resource-Handout-Phone.css. -->
+<link rel="stylesheet" href="ARA-2026-Resource-Handout-Screen.css">
+</head>
+<body>
+
+<!-- ============================ COVER ============================ -->
+<section class="cover" id="cover" aria-label="Cover">
+  <img class="cover-photo" src="images/cover-street-two.jpg" alt="A self-service yard at first light. Two lanes between rows of cars on wheel stands. The left lane has a hole in it. The right lane is open and lit by the morning sun.">
+  <div class="cover-scrim"></div>
+  <div class="cover-text">
+    <p class="eyebrow">ARA 2026 Convention and Expo &middot; Atlanta &middot; October 16, 2026</p>
+    <h1>Change the situation, not the effort.</h1>
+    <p class="cover-session">Become the Disruptor: Rethinking Self-Service Key Metrics with AI</p>
+    <p class="cover-author">Eric Larkin, COO and co-owner, Nevada Pic A Part, Las Vegas</p>
+    <p class="web-only cover-actions"><a class="btn light" href="#find-it-fast">Start reading</a> <a class="btn light" href="ARA-2026-Resource-Handout.pdf">Download the PDF</a></p>
+  </div>
+</section>
+
+<!-- ============================ FIND IT FAST ============================ -->
+<section class="findfast" id="find-it-fast">
+  <p class="lede">The one page from the hour: the prompt, the four questions, the four checks, the chain, the system, the data rule, and how this deck was built.</p>
+  <nav aria-label="Find it fast">
+    <p class="nav-label">Find it fast</p>
+    <p class="chips">
+      <a class="chip" href="#prompt">The prompt</a>
+      <a class="chip" href="#world-class">Five parts</a>
+      <a class="chip" href="#fill-in">Fill in the blanks</a>
+      <a class="chip" href="#eight">Eight questions</a>
+      <a class="chip" href="#four-questions">Four questions</a>
+      <a class="chip" href="#four-checks">Four checks</a>
+      <a class="chip" href="#chain">The chain</a>
+      <a class="chip" href="#system">The system</a>
+      <a class="chip" href="#data-rule">The data rule</a>
+      <a class="chip" href="#four-moves">Four moves</a>
+      <a class="chip" href="#library">Prompt library</a>
+      <a class="chip" href="#scorecard">Starter scorecard</a>
+      <a class="chip" href="#built">How this deck was built</a>
+      <a class="chip" href="#reading">Reading</a>
+      <a class="chip" href="#quotes">Quotes</a>
+      <a class="chip" href="#contact">Contact</a>
+    </p>
+  </nav>
+</section>
+
+<!-- ============================ PART 1: THE PROMPT ============================ -->
+<header class="part" id="part-1">
+  <p class="part-marker"><span class="part-num">Part 1 of 5</span><span class="bars"><i class="on"></i><i></i><i></i><i></i><i></i></span></p>
+  <h2 class="part-title">The prompt</h2>
+</header>
+
+<section id="prompt">
+  <h2>The operator prompt (what I actually said)</h2>
+  <p>Spoken, not typed. Do not ask for five KPIs. Ask it to build the prompt that interviews you, department by department, aimed at leading indicators, and tell it to push back.</p>
+  <div class="prompt">
+    <p class="prompt-label">Prompt</p>
+    <pre>I run a self-service auto recycling yard on EOS. Our scorecards are 5 to 15 weekly measurables, one owner each.
+
+Build me a world-class prompt that gets you to interview me, department by department: car buying, towing, intake and depollution, processing, holding, the yard, commodities and crush, retail sales, and Builders.
+
+Ask me about 10 questions per department, the way a Fortune 500 operations team would, aimed at LEADING indicators: weekly activities one seat controls that predict the result. One department's leading indicator is the next one's lagging indicator.
+
+Here is our dashboard. Tell me which of these numbers lead and which lag. Then draft a scorecard for one entry-level seat and one manager seat, and push back on anything that is really a lagging number.</pre>
+  </div>
+</section>
+
+<section id="world-class">
+  <h2>What makes a prompt world class</h2>
+  <p>Anthropic's own prompting guide comes down to five parts, in yard words:</p>
+  <div class="cards five">
+    <div class="card"><img class="icon" src="icons/mappin.svg" alt=""><div><h3>Context</h3><p>Who you are, your yard, your seat, that you run on EOS. The situation.</p></div></div>
+    <div class="card"><img class="icon" src="icons/target.svg" alt=""><div><h3>Job</h3><p>One clear task. "Argue against this metric," not "help with metrics."</p></div></div>
+    <div class="card"><img class="icon" src="icons/key.svg" alt=""><div><h3>Guardrails</h3><p>What it may use, what it may not, what it should not assume.</p></div></div>
+    <div class="card"><img class="icon" src="icons/clipboard.svg" alt=""><div><h3>Format</h3><p>Table, one page, five bullets. Say exactly what you want back.</p></div></div>
+    <div class="card"><img class="icon" src="icons/message.svg" alt=""><div><h3>Push back</h3><p>Tell it to ask you before it answers, and to say where it could be wrong.</p></div></div>
+  </div>
+  <p>Then iterate. The first answer is a draft. Give it the situation, not the effort.</p>
+</section>
+
+<section id="fill-in">
+  <h3 class="h3-section">Fill in the blanks</h3>
+  <div class="prompt">
+    <p class="prompt-label">Template</p>
+    <pre>CONTEXT: I run a self-service yard in [city], [one or two] yards, and we review numbers [weekly].
+JOB: Build me a prompt that interviews me, department by department, for leading indicators.
+GUARDRAILS: Use only the indicator names on my dashboard. No customer or employee data.
+FORMAT: About 10 questions per department, then one scorecard for [a seat].
+PUSH BACK: Before you answer, ask me what you need. Push back on anything that is really a mirror.</pre>
+  </div>
+</section>
+
+<section id="eight">
+  <h3 class="h3-section">What it asked before it answered (the eight questions, which cars to set)</h3>
+  <ol class="numbered">
+    <li>Which processed car goes to the yard first, and why?</li>
+    <li>Does the person setting the car know the demand?</li>
+    <li>What do customers search for that is not on the ground?</li>
+    <li>How long does a high-demand car sit in holding?</li>
+    <li>When a row is full, what comes out, and who decides?</li>
+    <li>Which cars drew the most customers last month?</li>
+    <li>What tells the yard tech it was a good day?</li>
+    <li>What one number would you paint on the bay wall?</li>
+  </ol>
+</section>
+
+<!-- ============================ PART 2: THE NUMBER ============================ -->
+<header class="part" id="part-2">
+  <p class="part-marker"><span class="part-num">Part 2 of 5</span><span class="bars"><i></i><i class="on"></i><i></i><i></i><i></i></span></p>
+  <h2 class="part-title">The number</h2>
+</header>
+
+<section id="four-questions">
+  <h2>Four questions that find a leading indicator</h2>
+  <p>They walk you from the number you trust to the number that predicts it. Answer them out loud with the person doing the work, not in your office.</p>
+  <div class="cards four">
+    <div class="card"><img class="icon" src="icons/branch.svg" alt=""><h3><span class="n">1</span>What is your Friday number?</h3><p>The mirror you already trust: the result.</p></div>
+    <div class="card"><img class="icon" src="icons/clock.svg" alt=""><h3><span class="n">2</span>What has to happen Monday?</h3><p>The activity that makes Friday good. That is your windshield candidate.</p></div>
+    <div class="card"><img class="icon" src="icons/user.svg" alt=""><h3><span class="n">3</span>Who does it, counted how?</h3><p>One owner, defined so two people count it the same way.</p></div>
+    <div class="card"><img class="icon" src="icons/eye.svg" alt=""><h3><span class="n">4</span>Gone 30 days, still true?</h3><p>If you left for thirty days and this was all you got, would it tell you the truth?</p></div>
+  </div>
+</section>
+
+<section id="four-checks">
+  <h2>Four checks before it goes on the scorecard</h2>
+  <div class="cards four">
+    <div class="card"><img class="icon" src="icons/trending.svg" alt=""><h3><span class="n">1</span>Leading?</h3><p>Moves before the result, not after.</p></div>
+    <div class="card"><img class="icon" src="icons/user.svg" alt=""><h3><span class="n">2</span>One owner?</h3><p>A seat owns it.</p></div>
+    <div class="card"><img class="icon" src="icons/target.svg" alt=""><h3><span class="n">3</span>Weekly, with a goal?</h3><p>Green or red every week, no gray.</p></div>
+    <div class="card"><img class="icon" src="icons/edit.svg" alt=""><h3><span class="n">4</span>Defined?</h3><p>Two people would count it the same way.</p></div>
+  </div>
+  <p class="callout">Three of four is a trial measurable. Put it on the scorecard for eight weeks and find out. Perfectionism is the enemy of progress.</p>
+</section>
+
+<section id="chain">
+  <h2>What on Monday predicts Friday? The chain</h2>
+  <p>Monday is the windshield. Friday is the mirror. Each link's windshield is the next link's mirror. Names only, from one yard's dashboard; candidates, not answers.</p>
+  <div class="chain">
+    <div class="link">
+      <img class="icon" src="icons/cart.svg" alt="">
+      <h3>Buy</h3>
+      <p class="wm"><span class="k">Monday</span>Incoming leads</p>
+      <p class="wm"><span class="k">Friday</span>Purchase %</p>
+    </div>
+    <div class="link">
+      <img class="icon" src="icons/tool.svg" alt="">
+      <h3>Process</h3>
+      <p class="wm"><span class="k">Monday</span>Processed per day</p>
+      <p class="wm"><span class="k">Friday</span>Cars moved to holding</p>
+    </div>
+    <div class="link">
+      <img class="icon" src="icons/mappin.svg" alt="">
+      <h3>Set</h3>
+      <p class="wm"><span class="k">Monday</span><span class="q">?</span> <span class="qnote">the one you built in the room</span></p>
+      <p class="wm"><span class="k">Friday</span>Customers per car set</p>
+    </div>
+    <div class="link">
+      <img class="icon" src="icons/tag.svg" alt="">
+      <h3>Sell</h3>
+      <p class="wm"><span class="k">Monday</span>Interchange attachment percentage</p>
+      <p class="wm"><span class="k">Friday</span>Parts per ticket</p>
+    </div>
+  </div>
+  <div class="chain-row">
+    <figure class="aerial">
+      <img src="images/taurus-yard.jpg" alt="Straight-down aerial of a self-service yard set entirely with the same late-1990s sedan, hundreds of them in back-to-back rows.">
+      <figcaption>A yard set entirely with late-90s Tauruses.</figcaption>
+    </figure>
+    <p>Customers per car set is a mirror. Set the whole yard with one wrong car, rotate it daily, hit five customers per car, and part nothing. The better question: did we set cars of value to our customer?</p>
+  </div>
+</section>
+
+<!-- ============================ PART 3: THE SYSTEM ============================ -->
+<header class="part" id="part-3">
+  <p class="part-marker"><span class="part-num">Part 3 of 5</span><span class="bars"><i></i><i></i><i class="on"></i><i></i><i></i></span></p>
+  <h2 class="part-title">The system</h2>
+</header>
+
+<section id="system">
+  <h2>How do you lock it in? Run it with a system</h2>
+  <p>A system is a situation: the same meeting, the same numbers, the same day, every week. Owner first, then AI.</p>
+  <div class="cards three">
+    <div class="card"><img class="icon" src="icons/repeat.svg" alt=""><div><h3>EOS in plain words</h3><p>A scorecard of 5 to 15 weekly numbers, one owner each. A weekly Level 10 meeting. Identify, discuss, solve (IDS) for anything off track. Quarterly Rocks. A number nobody understands is a number nobody owns, so ask the people doing the work what tells them it was a good day. Not their decision; their alignment. Start with <a href="https://www.eosworldwide.com/traction-book"><i>Traction</i></a> by Gino Wickman. EOS&reg; is a trademark of EOS Worldwide; not affiliated.</p></div></div>
+    <div class="card"><img class="icon" src="icons/clipboard.svg" alt=""><div><h3>Ninety</h3><p>The tool one yard uses to run EOS: <a href="https://www.ninety.io/">ninety.io</a></p></div></div>
+    <div class="card"><img class="icon" src="icons/grid.svg" alt=""><div><h3>Situated</h3><p>Angela Duckworth's three boxes: situation, thoughts, response. The situation does most of the work. Disruptors change box one. The five chapters are <a href="https://www.simonandschuster.com/books/Theres-a-Hole-in-My-Sidewalk/Portia-Nelson/9781582706856">Portia Nelson's</a>, as told in the book.</p></div></div>
+  </div>
+  <figure class="chapters">
+    <div class="panels">
+      <img src="images/chapter-1.jpg" alt="Chapter one: a yard man falls into a hole in the lane, hands up.">
+      <img src="images/chapter-2.jpg" alt="Chapter two: the same man falls into the same hole again.">
+      <img src="images/chapter-3.jpg" alt="Chapter three: the man climbs out of the hole.">
+      <img src="images/chapter-4.jpg" alt="Chapter four: the man walks around the hole.">
+      <img src="images/chapter-5.jpg" alt="Chapter five: the man walks away down an open lane.">
+    </div>
+    <p class="chapter-names"><span><b class="n">1</b>Fall in</span><span><b class="n">2</b>See it, fall in</span><span><b class="n">3</b>Fall in, climb out</span><span><b class="n">4</b>Walk around it</span><span><b class="n">5</b>A different street</span></p>
+    <figcaption>The five chapters, as they happen in a yard. After <a href="https://www.simonandschuster.com/books/Theres-a-Hole-in-My-Sidewalk/Portia-Nelson/9781582706856">Portia Nelson</a>, as told by Angela Duckworth in <i>Situated</i>. Panels: Eric Larkin with ChatGPT.</figcaption>
+  </figure>
+</section>
+
+<section id="data-rule">
+  <h2>The data rule: green, yellow, red</h2>
+  <div class="cards three rule">
+    <div class="card"><h3><span class="sw green"></span>Green: share.</h3><p>How the yard works. Metric names and definitions. SOPs. Counts and totals with no names. Made-up example data.</p></div>
+    <div class="card"><h3><span class="sw yellow"></span>Yellow: clean it first, on a business plan.</h3><p>Sales and inventory exports with customer info removed. Labor hours by seat, not by name. Scorecards with names replaced by seats. Use a business or team plan and read its data terms.</p></div>
+    <div class="card"><h3><span class="sw red"></span>Red: never.</h3><p>Customer names, IDs, phone numbers, payment info. Seller ID or title documents. Employee pay, SSNs, personnel files. Passwords, bank details, anything under NDA.</p></div>
+  </div>
+  <p>When in doubt, treat it as red, and follow your company's own policy.</p>
+</section>
+
+<section id="four-moves">
+  <h2>Give it your yard: four moves</h2>
+  <div class="cards four">
+    <div class="card"><img class="icon" src="icons/folder.svg" alt=""><h3>Projects</h3><p>Keep the context for one effort.</p></div>
+    <div class="card"><img class="icon" src="icons/link.svg" alt=""><h3>Connectors</h3><p>Bring in the dashboard or spreadsheet you already open every Monday (Microsoft 365, Google Drive), your meeting notes (Otter, Granola), your books (QuickBooks, Xero), and Zapier or a CSV for everything else.</p></div>
+    <div class="card"><img class="icon" src="icons/book.svg" alt=""><h3>The brain</h3><p>One shared file of your rules, your seats and your definitions that every conversation starts from.</p></div>
+    <div class="card"><img class="icon" src="icons/key.svg" alt=""><h3>Governance</h3><p>One person changes the brain. Everyone else sends suggestions at the end of a session.</p></div>
+  </div>
+  <p>For "I don't have access to change anything": Claude Code. You describe the tool, it writes it. Train it like a new hire.</p>
+</section>
+
+<!-- ============================ PART 4: MONDAY ============================ -->
+<header class="part" id="part-4">
+  <p class="part-marker"><span class="part-num">Part 4 of 5</span><span class="bars"><i></i><i></i><i></i><i class="on"></i><i></i></span></p>
+  <h2 class="part-title">Monday morning</h2>
+</header>
+
+<section id="library">
+  <h2>Challenge prompt library</h2>
+  <p>Replace anything in brackets. Start a new conversation for each topic and run the setup prompt first.</p>
+
+  <div class="prompt lib">
+    <p class="prompt-label">1 &middot; Setup</p>
+    <h3>Give Claude your yard</h3>
+    <pre>I run [department / seat] at a self-service auto recycling yard in [city]. Customers pay admission, pull their own parts from vehicles we buy, depollute, and set in the yard. We run on EOS: weekly Scorecard, Level 10 Meeting, IDS, and quarterly Rocks.
+
+My goal this quarter is: [goal or Rock].
+
+For this conversation, act as a skeptical operations analyst who has never worked in auto recycling and does not accept "we've always done it that way." Before you give advice, ask me up to 5 questions you need answered.</pre>
+  </div>
+
+  <div class="prompt lib">
+    <p class="prompt-label">2</p>
+    <h3>Put a metric on trial</h3>
+    <pre>We track this metric: [metric], defined as [definition], reviewed [weekly / monthly] by [seat].
+
+Argue against it. Tell me:
+1. What it actually measures and what it misses.
+2. What an average of this number could be hiding.
+3. What decision it should drive, and whether that decision would change if the number moved.
+4. What a first-principles operator from another industry would measure instead.
+
+Be direct. Do not defend the metric just because we use it.</pre>
+  </div>
+
+  <div class="prompt lib">
+    <p class="prompt-label">3</p>
+    <h3>Break the average</h3>
+    <pre>Attached is [8 to 12] weeks of data: each car set, its make, model, year, set date, and the customers or parts sold from it. Names and personal info are removed.
+
+Do not give me the overall average. Instead:
+1. Group the cars by make, model, and year range and show which groups draw the most customers and sales per car.
+2. Show which groups we set a lot of that draw very little.
+3. Tell me what this suggests about which cars we should set more of and less of.
+4. Tell me how confident I should be given how much data this is.
+
+Give me a short table and 3 plain-English takeaways.</pre>
+  </div>
+
+  <div class="prompt lib">
+    <p class="prompt-label">4</p>
+    <h3>Audit the Scorecard</h3>
+    <pre>Here is our current weekly Scorecard: [paste measurables, owners, goals].
+
+For each measurable, tell me:
+- Leading or lagging?
+- Can one seat control it within a week?
+- Would a change in it change what we do next week?
+
+Then recommend which ones to cut or replace. Finally, make the strongest case for keeping one measurable you recommended cutting, so I can decide.</pre>
+  </div>
+
+  <div class="prompt lib">
+    <p class="prompt-label">5</p>
+    <h3>Reason up from first principles</h3>
+    <pre>Start from the basic truth of a self-service sale: a customer finds the part they came for, on a car that is in the yard, and leaves glad they came.
+
+Reason up from that truth. Give me 5 leading indicators for [department] that:
+- move before sales or car count move,
+- one seat can control each week,
+- we can measure from data we already have: [POS / yard management / payroll hours / inventory search].
+
+For each, give a one-line definition and explain why it should lead.</pre>
+  </div>
+
+  <div class="prompt lib">
+    <p class="prompt-label">6</p>
+    <h3>Test whether it leads</h3>
+    <pre>Here are [12] weeks of two numbers:
+- Candidate leading indicator: [name and weekly values]
+- Result we care about: [name and weekly values]
+
+Does the candidate tend to move before the result? Explain in plain English, show me what you looked at, and tell me honestly how much this little data can prove. Suggest what to watch for over the next 8 weeks to confirm it.</pre>
+  </div>
+
+  <div class="prompt lib">
+    <p class="prompt-label">7</p>
+    <h3>Write the Measurable Spec</h3>
+    <pre>Turn this into a Scorecard measurable spec: [measurable].
+
+Fill in: definition (so two people would count it the same way), owner seat, weekly goal, data source, what counts as off track, and the first question we ask in IDS when it is off track.
+
+Flag anything vague, and ask me for anything you would have to guess.</pre>
+  </div>
+
+  <div class="prompt lib">
+    <p class="prompt-label">8</p>
+    <h3>Draft the Level 10 brief</h3>
+    <pre>Here is this week's Scorecard with goals and actuals: [paste].
+
+Write a one-page brief for our Level 10 Meeting:
+1. Which measurables are off track, and by how much.
+2. For each, 2 or 3 IDS questions aimed at the root cause, not the person.
+3. Any number that has been off track 3 or more weeks in a row.
+4. One number that looks on track but might be misleading.
+
+Plain language. No blame.</pre>
+  </div>
+
+  <div class="prompt lib">
+    <p class="prompt-label">9</p>
+    <h3>Make it argue back</h3>
+    <pre>Before I act on this, give me the strongest case that you are wrong. What would have to be true for this recommendation to hurt my yard?</pre>
+  </div>
+</section>
+
+<section id="scorecard">
+  <h2>Starter scorecard by seat</h2>
+  <p>Examples, not a finished scorecard. Question each one with the prompts above before you adopt it, and set your own goals.</p>
+  <table class="grid">
+    <thead><tr><th>Seat</th><th>Leading measurable</th><th>Why it leads</th></tr></thead>
+    <tbody>
+      <tr><td>Car buying</td><td>Incoming leads</td><td>Cars in the yard next month start here</td></tr>
+      <tr><td>Car buying</td><td>Demand-matched buy rate</td><td>Share of cars bought that customers are searching for</td></tr>
+      <tr><td>Production</td><td>Processed per day</td><td>A thin bay today is a thin yard in two weeks</td></tr>
+      <tr><td>Production</td><td>Cars moved to holding</td><td>What is ready to stand</td></tr>
+      <tr><td>Yard</td><td>Your Monday number for customers per car set</td><td>The one you built in the room: did we set cars of value?</td></tr>
+      <tr><td>Yard tech</td><td>Vehicles stood today, stands and signs set</td><td>Things a new hire can see at the end of a shift</td></tr>
+      <tr><td>Sales</td><td>Interchange attachment percentage</td><td>Moves parts per ticket</td></tr>
+      <tr><td>Leadership</td><td>Scorecard complete, no blank cells</td><td>If the numbers are not filled in, nothing else works</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============================ PART 5: BEHIND THE DECK ============================ -->
+<header class="part" id="part-5">
+  <p class="part-marker"><span class="part-num">Part 5 of 5</span><span class="bars"><i></i><i></i><i></i><i></i><i class="on"></i></span></p>
+  <h2 class="part-title">Behind the deck</h2>
+</header>
+
+<section id="built">
+  <h2>How this deck was built</h2>
+  <p>A team of AI agents, working from one prompt, built the deck you watched: a creative director leading fourteen specialists through ten gated steps, with the speaker interviewed at every gate. The prompt is long because a good one is.</p>
+
+  <h3>A worked example: the aerial photo that took seven tries</h3>
+  <p>The yard words did not work: "rows," "east to west," "18 deep," "roadway." The image model only knows what a picture looks like. The prompt that finally passed describes the frame, not the yard. Same rule as the operator prompt: give it the situation, not the effort.</p>
+  <div class="prompt">
+    <p class="prompt-label">Image prompt</p>
+    <pre>Straight-down satellite style aerial photograph of a self-service auto salvage yard, photorealistic. Pale gray compacted gravel ground, not asphalt. Every car's long axis is horizontal in the frame, noses pointing left or right. The cars are stacked side by side, door to door, into straight vertical lines of ten to eighteen cars, no gaps. The lines sit in pairs: the two lines of a pair are back to back with their rear bumpers nearly touching, and the fronts of each pair face a narrow aisle half a car length wide. Dozens of pairs across the frame, extremely dense. Three or four large blocks of these lines are stacked top to bottom, separated by horizontal roadways about one car length wide. Hundreds of cars, one model, many faded colors. Morning sun, short shadows all pointing the same way. No people, no readable text, no logos.</pre>
+  </div>
+</section>
+
+<section id="reading">
+  <h2>Reading</h2>
+  <ul class="books">
+    <li><a class="btn" href="https://www.amazon.com/dp/1668005948"><i>Situated</i>, Angela Duckworth (2026)</a><span class="why">The three boxes. Change the situation first.</span></li>
+    <li><a class="btn" href="https://www.amazon.com/dp/1582706859"><i>There's a Hole in My Sidewalk</i>, Portia Nelson</a><span class="why">The five chapters: her poem "Autobiography in Five Short Chapters" is in it.</span></li>
+    <li><a class="btn" href="https://www.amazon.com/dp/198215697X"><i>The 4 Disciplines of Execution</i>, McChesney, Covey and Huling</a><span class="why">Lead measures: predictive and influenceable.</span></li>
+    <li><a class="btn" href="https://www.amazon.com/dp/0884271951"><i>The Goal</i>, Eliyahu Goldratt</a><span class="why">Find the bottleneck. Improve anything else and nothing changes.</span></li>
+    <li><a class="btn" href="https://www.amazon.com/dp/1250235375"><i>Radical Candor</i>, Kim Scott</a><span class="why">Care personally, challenge directly.</span></li>
+    <li><a class="btn" href="https://www.amazon.com/dp/1936661845"><i>Traction</i>, Gino Wickman</a><span class="why">Start with the Data Component and the Scorecard. Also <a href="https://www.eosworldwide.com/what-the-heck-is-eos/"><i>What the Heck is EOS?</i></a>, <a href="https://www.eosworldwide.com/get-a-grip-book/"><i>Get a Grip</i></a>, <a href="https://www.eosworldwide.com/rocket-fuel-book/"><i>Rocket Fuel</i></a>.</span></li>
+    <li><a class="btn" href="https://www.amazon.com/dp/1982181281"><i>Elon Musk</i>, Walter Isaacson (2023)</a><span class="why">Where "question every requirement" is laid out in full.</span></li>
+  </ul>
+</section>
+
+<section id="quotes">
+  <h2>Quotes, as used in the room</h2>
+  <ul class="quotes">
+    <li><q>Perfectionism is the enemy of progress.</q> Credited to Winston Churchill; the idea traces to Voltaire (1770): the best is the enemy of the good.</li>
+    <li><q>Question every requirement.</q> Elon Musk, step one of his algorithm, in Walter Isaacson's <i>Elon Musk</i> (2023).</li>
+    <li><q>Doing the same thing again and expecting a different result.</q> Popularly attributed to Albert Einstein; origin unclear.</li>
+  </ul>
+</section>
+
+<!-- ============================ BACK PAGE ============================ -->
+<section class="back" id="contact">
+  <div class="contact">
+    <img class="headshot" src="images/eric-larkin.jpg" alt="Eric Larkin">
+    <div>
+      <h2>Questions or want to compare notes?</h2>
+      <p class="who">Eric Larkin, COO and co-owner<br>Nevada Pic A Part, Las Vegas</p>
+      <p><a class="btn" href="mailto:eric@nvpap.com">Email eric@nvpap.com</a></p>
+      <p class="web-only downloads"><a class="btn" href="ARA-2026-Resource-Handout.pdf">Download the PDF (phone size)</a> <a class="btn" href="ARA-2026-Resource-Handout-Letter.pdf">Print version (US Letter PDF)</a></p>
+    </div>
+  </div>
+  <p class="takeaway">Change the situation, not the effort.</p>
+  <p class="legal">Become the Disruptor: Rethinking Self-Service Key Metrics with AI. ARA 2026 Convention and Expo, Atlanta, October 16, 2026. Eric Larkin, COO and co-owner, Nevada Pic A Part. The Newsweek cover shown in the session is Newsweek's, December 24, 2021, shown for commentary. Nothing on this page is legal, financial or data-protection advice; follow your own company's policy. EOS&reg;, Level 10 Meeting&trade; and IDS&trade; are trademarks of EOS Worldwide; this session and page are not affiliated with or endorsed by EOS Worldwide. Claude is made by Anthropic.</p>
+</section>
+
+</body>
+</html>

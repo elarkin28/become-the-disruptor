@@ -1,0 +1,148 @@
+/* The web page. One column on a phone, wider grids on a desktop, same words and look as the PDFs.
+   Loaded after ARA-2026-Resource-Handout.css. No JavaScript anywhere. */
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-size: 17px; line-height: 1.55; }
+@media (max-width: 640px) { body { font-size: 16px; line-height: 1.5; } }
+
+.web-only { display: block; }
+p.web-only { display: block; }
+
+/* A centered column for everything but the cover */
+.findfast, .part, section { max-width: 920px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px; }
+.part { padding: 22px 26px 24px 26px; }
+@media (max-width: 640px) { .part { padding: 18px 20px 20px 20px; margin-left: 16px; margin-right: 16px; } .findfast, section { padding-left: 16px; padding-right: 16px; } }
+section, .part { scroll-margin-top: 92px; }
+
+/* ---------- Cover: a full-screen hero ---------- */
+.cover { height: min(100svh, 860px); min-height: 540px; }
+.cover-text { padding: 0 max(20px, calc((100% - 880px) / 2)) 56px max(20px, calc((100% - 880px) / 2)); }
+.cover-text .eyebrow { font-size: 13px; margin-bottom: 18px; }
+.cover-text h1 { font-size: clamp(40px, 7.2vw, 76px); max-width: 14ch; margin-bottom: 20px; }
+.cover-text .cover-session { font-size: clamp(16px, 2.2vw, 21px); line-height: 1.35; max-width: 34ch; margin-bottom: 18px; }
+.cover-text .cover-author { font-size: 15px; margin-bottom: 26px; }
+.cover-actions .btn { margin: 0 10px 10px 0; }
+.btn.light { background: var(--white); color: var(--navy); }
+.btn.light i { color: var(--navy); }
+@media (max-width: 640px) { .cover-text { padding-bottom: 40px; } .cover-text .eyebrow { font-size: 11.5px; } }
+
+/* ---------- Find it fast: a bar that sticks to the top ---------- */
+.findfast { padding-top: 36px; }
+.lede { font-size: clamp(18px, 2.4vw, 22px); line-height: 1.4; margin-bottom: 22px; }
+.findfast nav { position: sticky; top: 0; z-index: 20; background: var(--cream); margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); padding: 10px calc(50vw - 50%) 8px calc(50vw - 50%); border-bottom: 1px solid var(--navy-25); }
+.findfast nav .nav-label, .findfast nav .chips { padding-left: 0; }
+.nav-label { font-size: 12px; margin-bottom: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
+.chip { font-size: 14px; padding: 8px 14px; margin: 0; border: 1px solid transparent; }
+.chip:hover, .chip:focus-visible { border-color: var(--navy); outline: none; }
+@media (max-width: 640px) {
+  .chips { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip { flex: 0 0 auto; white-space: nowrap; }
+}
+.findfast::after { content: ""; display: block; height: 28px; }
+
+/* ---------- Part opener band ---------- */
+.part { margin-top: 40px; margin-bottom: 28px; }
+.part-marker { margin-bottom: 10px; }
+.part-num { font-size: 12px; }
+.bars { gap: 6px; }
+.bars i { width: 40px; height: 7px; }
+.part-title { font-size: clamp(28px, 4vw, 40px); }
+
+/* ---------- Sections ---------- */
+section { margin-bottom: 44px; }
+section > h2 { font-size: clamp(24px, 3vw, 30px); line-height: 1.15; margin-bottom: 10px; }
+section > h2 + p { margin-bottom: 18px; }
+section > p { margin-bottom: 14px; }
+.h3-section { font-size: 20px; margin-bottom: 12px; }
+.callout { font-size: 19px; line-height: 1.45; margin-top: 18px; }
+
+/* Cards */
+.cards { display: grid; gap: 14px; margin-bottom: 16px; }
+.cards.four { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.cards.five, .cards.three { grid-template-columns: 1fr; }
+.card { padding: 20px 22px 22px 22px; width: auto; }
+.cards.five .card, .cards.three .card { display: flex; align-items: flex-start; gap: 16px; }
+.cards.five .card .icon, .cards.three .card .icon { flex: 0 0 auto; margin: 3px 0 0 0; }
+.cards.five .card h3 { display: inline; margin-right: 0.4em; }
+.cards.five .card p { display: inline; }
+.cards.three.rule .card { display: block; }
+.card .icon { width: 28px; height: 28px; margin-bottom: 10px; }
+.card h3 { font-size: 19px; margin-bottom: 4px; }
+.card p { font-size: 16.5px; line-height: 1.5; }
+
+/* Prompt cards */
+.prompt { padding: 20px 24px 22px 24px; margin-bottom: 16px; }
+.prompt-label { font-size: 12px; margin-bottom: 8px; }
+.prompt h3 { font-size: 20px; margin-bottom: 10px; }
+.prompt pre { font-size: 16.5px; line-height: 1.5; }
+
+/* Eight questions */
+ol.numbered li { padding-left: 40px; margin-bottom: 10px; font-size: 17px; line-height: 1.45; }
+ol.numbered li::before { font-size: 17px; }
+
+/* The chain */
+.chain { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 22px; }
+.link { padding: 18px 18px 20px 18px; width: auto; }
+.link .icon { width: 26px; height: 26px; margin-bottom: 8px; }
+.link h3 { font-size: 15px; margin-bottom: 12px; }
+.link .wm { font-size: 16.5px; margin-bottom: 12px; }
+.link .k { font-size: 12px; margin-bottom: 2px; }
+.link .q { font-size: 30px; line-height: 1; }
+.link .qnote { display: block; font-size: 15px; line-height: 1.35; }
+.chain-row { display: flex; gap: 24px; align-items: flex-start; }
+.aerial { width: 42%; flex: 0 0 auto; }
+.aerial figcaption { font-size: 14px; margin-top: 8px; }
+.chain-row > p { flex: 1 1 auto; font-size: 18px; line-height: 1.5; }
+@media (max-width: 720px) { .chain-row { display: block; } .aerial { width: 100%; margin-bottom: 14px; } }
+
+/* Chapters strip */
+.chapters { margin-top: 20px; }
+.panels { gap: 8px; }
+.panels img { width: calc((100% - 32px) / 5); }
+.chapter-names { font-size: 15px; gap: 6px 22px; margin-top: 12px; }
+.chapters figcaption { font-size: 14px; line-height: 1.45; margin-top: 10px; }
+@media (max-width: 640px) { .chapter-names { font-size: 13.5px; gap: 4px 14px; } }
+
+/* Tables: a real table on wide screens, stacked cards on narrow ones */
+table { font-size: 16px; line-height: 1.45; margin-bottom: 16px; }
+table.grid th, table.grid td { padding: 12px 16px; }
+@media (max-width: 640px) {
+  table.grid, table.grid thead, table.grid tbody, table.grid tr, table.grid th, table.grid td { display: block; }
+  table.grid thead { display: none; }
+  table.grid tr { background: var(--white); border-radius: var(--radius); padding: 14px 18px 16px 18px; margin-bottom: 10px; }
+  table.grid td, table.grid tbody td { padding: 0; background: none; border: 0; }
+  table.grid tbody td:first-child { color: var(--green); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 12px; margin-bottom: 3px; }
+  table.grid tbody td:nth-child(2) { font-weight: 700; font-size: 17px; margin-bottom: 3px; }
+  table.grid tbody tr:last-child td:first-child, table.grid tbody tr:last-child td:last-child { border-radius: 0; }
+}
+
+/* Behind the deck */
+#built h3 { font-size: 20px; margin: 18px 0 6px 0; }
+#built p { margin-bottom: 12px; }
+#built .prompt { margin-top: 16px; }
+
+/* Reading and quotes */
+ul.books li { margin-bottom: 18px; }
+ul.books .btn { font-size: 16px; padding: 10px 20px; margin-bottom: 6px; line-height: 1.3; }
+ul.books .why { font-size: 16.5px; line-height: 1.45; }
+ul.quotes li { margin-bottom: 12px; font-size: 17px; line-height: 1.5; }
+.btn:hover, .btn:focus-visible { background: var(--green); color: var(--white); outline: none; }
+.btn:hover i, .btn:focus-visible i { color: var(--white); }
+
+/* Back */
+.back { padding-top: 10px; padding-bottom: 60px; }
+.contact { display: flex; gap: 28px; align-items: flex-start; margin-bottom: 40px; }
+.headshot { width: 150px; height: 150px; flex: 0 0 auto; }
+.contact h2 { font-size: clamp(24px, 3vw, 30px); margin-bottom: 8px; }
+.who { font-size: 17px; margin-bottom: 14px; }
+.contact .btn { font-size: 16px; padding: 10px 22px; }
+.downloads { margin-top: 12px; }
+.downloads .btn { margin: 0 10px 10px 0; }
+.takeaway { font-size: clamp(30px, 4.5vw, 44px); margin: 30px 0 40px 0; }
+.legal { font-size: 14px; line-height: 1.5; }
+@media (max-width: 640px) { .contact { display: block; } .headshot { width: 120px; height: 120px; margin-bottom: 14px; } }
+
+/* If someone prints the web page, hide the bar and the buttons; the PDFs are the real print versions */
+@media print { .findfast nav, .web-only { display: none !important; } }
